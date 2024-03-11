@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <script>
+    function changeColor() {
+      document.body.style.backgroundColor = 'white';
+      var clickmeElements = document.getElementsByClassName('clickme');
+      for (var i = 0; i < clickmeElements.length; i++) {
+        clickmeElements[i].style.color = 'black';
+      }
+      var invisElements = document.getElementsByClassName('invis');
+      for (var j = 0; j < invisElements.length; j++) {
+        invisElements[j].style.color = 'white';
+      }
+      var clickmeElements = document.getElementsByClassName('other1');
+      for (var i = 0; i < clickmeElements.length; i++) {
+        clickmeElements[i].style.color = 'white';
+      }
+      var clickmeElements = document.getElementsByClassName('other2');
+      for (var i = 0; i < clickmeElements.length; i++) {
+        clickmeElements[i].style.color = 'white';
+      }
+      document.getElementsByClassName('clickme2')[0].classList.remove('hoverEffect');
+      return false;
+    }
+    function changeColor1() {
+      var clickmeElements = document.getElementsByClassName('other1');
+      for (var i = 0; i < clickmeElements.length; i++) {
+        clickmeElements[i].style.color = 'black';
+      }
+      return false;
+    }
+    function changeColor2() {
+      var clickmeElements = document.getElementsByClassName('other2');
+      for (var i = 0; i < clickmeElements.length; i++) {
+        clickmeElements[i].style.color = 'black';
+      }
+      return false;
+    }
+    function changeColor3() {
+      var clickmeElements = document.getElementsByClassName('other2');
+      for (var i = 0; i < clickmeElements.length; i++) {
+        clickmeElements[i].style.color = 'white';
+      }
+      setTimeout(function() {
+        document.body.innerHTML = '';
+        const screamImg = document.createElement('img');
+        document.body.style.backgroundColor = 'black';
+        screamImg.src = 'https://pikuco.ru/upload/test_stable/d40/d40fec83ec1975f8455a2e763a185243.webp';
+        screamImg.style.height = '100%';
+        document.body.appendChild(screamImg);
+
+        const audio = new Audio('./sounds/index.mp3');
+        audio.volume = 1.0;
+        audio.play();
+        setTimeout(function() {
+          document.body.innerHTML = '';
+          document.body.style.backgroundColor = 'white';
+        }, 1400);
+        setTimeout(function() {
+          document.body.style.backgroundColor = 'black';
+        }, 1430);
+        setTimeout(function() {
+          document.body.style.backgroundColor = 'white';
+        }, 1470);
+        setTimeout(function() {
+          window.location.reload();
+        }, 1500);
+      }, 3000);
+
+
+      return false;
+    }
+  </script>
+</head>
+<style>
+  body {
+    width: 100%;
+    background-color: black;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  .clickme {
+    color: white;
+  }
+
+  .clickme2 {
+    color: black;
+  }
+
+  .clickme2.hoverEffect:hover {
+    color: white;
+  }
+
+  .clickme3 {
+    color: black;
+  }
+
+  .invis {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color: black;
+  }
+
+  .other1, .other2 {
+    color: black;
+    text-decoration: none;
+  }
+
+</style>
+<body>
+  <div class="invis"></div>
+  <div class="invis" style="text-align: left">--> https://t.me <--</div>
+  <div class="invis"></div>
+  <a class="clickme" onClick="window.location.reload()">TAKE A HINT</a>
+  <div class="invis"></div>
+  <a class="clickme2 hoverEffect" onClick="changeColor()">TAKE A REAL HINT</a>
+  <div class="invis"></div>
+  <a class="clickme3" onClick="changeColor1()" href="https://en.wikipedia.org/wiki/Rickrolling" target="_blank">--> Click me! <--</a>
+  <div class="invis"></div>
+  <a class="other1" onClick="changeColor2()" href="https://static.wikia.nocookie.net/352a8a7c-4ef6-40e6-9190-dd1c11ac6c1f/scale-to-width/755" target="_blank">--> Click me!! <--</a>
+  <div class="invis"></div>
+  <a class="other2" onClick="changeColor3()">--> Click me!!! <--</a>
+  <div class="invis"></div>
+  <div class="invis"></div>
+  <div class="invis" style="text-align: right">--> +4rwUFvOcTsg3YjNi <-- &nbsp</div>
+  <!-- I SAY NOTHING. -->
+  <!-- I SAY NOTHING. -->
+  <!-- I SAY NOTHING. -->
+  <div class="invis"></div>
+</body>
+<nikitron></nikitron>
+</html>
